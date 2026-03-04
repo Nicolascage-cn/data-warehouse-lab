@@ -1,22 +1,25 @@
-Data Warehouse Practice Project
+# Data Warehouse Lab (E-commerce)
 
-Tech Stack
+## Tech Stack
 - MySQL
-- SQL
-- Python
-- DataGrip
+- SQL (DataGrip)
+- Git/GitHub
 
-Architecture
-ODS → DWD → DWS → ADS
+## Data Model (Source)
+Database: `nico_lab`
+Tables:
+- customers
+- products
+- orders
+- order_items
+- payments
 
-Content
-1. ODS data ingestion
-2. DWD data cleaning
-3. DWS aggregation
-4. ADS business metrics
+## Warehouse Layers
+Database: `dw_lab`
+- ODS: raw mirror tables (full load)
+- DWD/DWS/ADS: to be built
 
-Metrics
-- GMV
-- AOV
-- Repeat Rate
-- Customer Retention
+## How to Run
+1. Run ODS full load: `sql/ods/02_full_load_ods.sql`
+2. Run reconciliation: `sql/ods/03_reconcile_ods.sql`
+
